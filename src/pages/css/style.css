@@ -1,0 +1,79 @@
+body{
+    background-color: #e8ee43;
+}
+.container{
+    margin-top:100px ;
+    height: 100vh;
+}
+.newarrival{
+    background:green ;
+    width: 40px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+.col-md-7{
+    color:#555;
+}
+.review{
+    background-color: #008000;
+    display:inline-block;
+    color: #fff ;
+    padding: 4px;
+   
+    border-radius: 5px;
+    font-size: 15px;
+
+}
+.price{
+    color:rgb(29,28,28);
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.price-box{
+    display: flex;
+    align-items: center;
+}
+
+input{
+    width: 30px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    text-align: center;
+}
+button{
+    width: 180px;
+    color: #fff;
+    font-size: 30px;
+    outline: none;
+    border: 0;
+    border-radius: 20px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #fe980f;
+    font-weight: bold;
+    text-align: center;
+    
+    
+    
+}
+.btnnn{
+    display: flex;
+    flex-direction: row;
+    padding:5px;
+}
+button :hover{
+    transform: scale(1.05);
+    transition: .4s ease-in-out;
+}
+
+button .cart{
+    margin-right: 10px;
+}
+.buy{
+    background-color: rgb(201,97,57);
+}

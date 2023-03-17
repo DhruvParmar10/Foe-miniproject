@@ -1,0 +1,247 @@
+body
+{ 
+   background-color: #000000;
+}
+
+
+
+.navbar {
+  background-color: #1f1f1f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbar-brand a {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+
+.navbar-links ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.navbar-links li {
+  margin: 0 20px;
+}
+
+.navbar-links a {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  margin-bottom: 5px;
+  background-color: #333;
+  transition: all 0.5s ease;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-search {
+    display: none;
+  }
+  
+  .navbar-toggle {
+    display: block;
+  }
+  
+  .navbar-toggle span:nth-child(2) {
+    transform-origin: center;
+  }
+  
+  .navbar-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }}
+
+  /* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+/* styling of whole input container */
+.form {
+  --timing: 0.3s;
+  --width-of-input: 200px;
+  --height-of-input: 40px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-color: #2f2ee9;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg,#fff);
+}
+/* styling of Input */
+.input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+/* Hover on Input */
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+/* here is code of animated border */
+.form:focus-within:before {
+  transform: scale(1);
+}
+
+
+  
+  .container {
+    position: relative;
+    font-family: sans-serif;
+  }
+  
+  .container::before, .container::after {
+    content: "";
+  
+    position: absolute;
+  }
+  
+  .container::before {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    top: 30%;
+    right: 7%;
+  }
+  
+  .container::after {
+    content: "";
+    position: absolute;
+    height: 3rem;
+    top: 8%;
+    right: 5%;
+    border: 1px solid;
+  }
+  
+  .container .box {
+    width: 11.875em;
+    height: 15.875em;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.074);
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: .7rem;
+    transition: all ease .3s;
+  }
+  
+  .container .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .container .box .title {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: .1em
+  }
+  
+  .container .box div strong {
+    display: block;
+    margin-bottom: .5rem;
+  }
+  
+  .container .box div p {
+    margin: 0;
+    font-size: .9em;
+    font-weight: 300;
+    letter-spacing: .1em;
+  }
+  
+  .container .box div span {
+    font-size: .7rem;
+    font-weight: 300;
+  }
+  
+  .container .box div span:nth-child(3) {
+    font-weight: 500;
+    margin-right: .2rem;
+  }
+  
+  .container .box:hover {
+    box-shadow: 0px 0px 20px 1px #ffbb763f;
+    border: 1px solid rgba(255, 255, 255, 0.454);
+  }
+  
+  .prods
+  {
+     display: flex;
+     flex-direction: row;
+     padding-top: 1%;
+     color: #ffffff;
+    
+  }
+.controls
+{
+  display: flex;
+  justify-content: center;
+}
+
+
+  
