@@ -4,6 +4,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Products from './pages/Products'
 import Review from './pages/Review'
+import ProductPage from './pages/ProductPage'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import supabase from './config/supabaseClient'
@@ -31,7 +32,7 @@ function App() {
         <Route path='/Register' element={<Register/>}/>
         <Route path='/Products' element={<Products/>}/>
         <Route path='/Reviews' element={<Review/>}/>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/:id' element={<ProductPage/>}/>
       </Routes>
   </>
     
