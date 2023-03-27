@@ -8,6 +8,7 @@ import ProductPage from './pages/ProductPage'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import supabase from './config/supabaseClient'
+import Cart from './pages/Cart'
 
 
 
@@ -33,6 +34,7 @@ function App() {
         <Route path='/Products' element={<Products/>}/>
         <Route path='/Reviews' element={<Review/>}/>
         <Route path='/:id' element={<ProductPage/>}/>
+        <Route path='/Cart' element={<Cart/>}/>
       </Routes>
   </>
     

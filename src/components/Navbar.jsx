@@ -102,7 +102,7 @@ const Navbar = () => {
                 <Link to="/Login">👤</Link>
               </li>
               <li>
-                <Link>🛒</Link>
+                <Link to="/Cart">🛒</Link>
               </li>
             </ul>
           </div>
