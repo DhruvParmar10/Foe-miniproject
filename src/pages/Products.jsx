@@ -3,6 +3,7 @@ import supabase from "../config/supabaseClient";
 import Auth from "../components/Auth";
 import Navbar from "../components/Navbar";
 import ProductCard from "../components/ProductCard";
+import FliterProduct from "../components/FliterProduct";
 import "./css/product.css";
 
 const CDNURL =
@@ -10,6 +11,8 @@ const CDNURL =
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const [search, setSearch] = useState("");
+  const [fliterText,setFliterText] = useState("Custom-order");
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -25,6 +28,10 @@ const Products = () => {
     fetchProducts();
   }, []);
 
+  function onFilterValueChanged(filtervalue){
+      setFliterText(filtervalue);
+  }
+
   return (
     <div>
       <Auth />
@@ -33,6 +40,7 @@ const Products = () => {
         <div className="leftSide">
           <div className="sort-container">
             <p className="catagory-title">Catagory</p>
+            <FliterProduct filterValueSelected ={onFilterValueChanged}/>
           </div>
         </div>
         <div className="rightSide">
@@ -45,6 +53,9 @@ const Products = () => {
                   placeholder="Search"
                   name="text"
                   className="input"
+                  onChange={(e) => {
+                    setSearch(e.target.value);
+                  }}
                 />
                 <svg
                   fill="#000000"
@@ -62,9 +73,25 @@ const Products = () => {
             </div>
             <div>
               <div className="product-container">
-                {products.map((product) => (
-                  <ProductCard key={product.id} product={product} />
-                ))}
+                {products
+                  .filter((item) => {
+                    return search.toLowerCase() === ""
+                      ? item
+                      : item.Product_Name.toLowerCase().includes(search);
+                  }).filter((product) => {
+                    if(fliterText === "Ball"){
+                      return product.Product_Type.includes(fliterText);
+                    } else if (fliterText === "Bat"){
+                      return product.Product_Type.includes(fliterText);
+                    } else if (fliterText === "Shoes"){
+                      return product.Product_Type.includes(fliterText);
+                    }else {
+                      return product;
+                    }
+                  })
+                  .map((product) => (
+                    <ProductCard key={product.id} product={product} />
+                  ))}
               </div>
             </div>
           </div>
