@@ -39,7 +39,7 @@ const Products = () => {
       <div className="grid-container">
         <div className="leftSide">
           <div className="sort-container">
-            <p className="catagory-title">Catagory</p>
+            <p className="catagory-title">Category</p>
             <FliterProduct filterValueSelected ={onFilterValueChanged}/>
           </div>
         </div>

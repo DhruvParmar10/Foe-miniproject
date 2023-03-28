@@ -11,6 +11,7 @@ const FliterProduct = (props) => {
 
   return (
     <>
+    <div className="enhanced">
       <div className="filter-search">
         <select name="isA-Z" onChange={onFilterValueChanged}>
           <option value="Custom-order">Custom</option>
@@ -19,19 +20,30 @@ const FliterProduct = (props) => {
           <option value="Shoes">Shoes</option>
         </select>
       </div>
-      <input type="radio" id="html" name="fav_language" value="HTML" onChange={onRadioValueChanged}/>
-      <label htmlFor="html">below 500</label>
+      <div className="radioselect">
+      <div class="container">
+      <div class="container">
+	<form>
+		<label>
+			<input type="radio" name="radio" checked=""/>
+			<span>Under 500</span>
+		</label>
+		<label>
+			<input type="radio" name="radio"/>
+			<span>500-1000</span>
+		</label>
+		<label>
+			<input type="radio" name="radio"/>
+			<span>Above 1000</span>
+		</label>
+	</form>
+</div>
+</div>
       <br />
-      <input type="radio" id="css" name="fav_language" value="CSS" />
-      <label htmlFor="css">500 - 1000</label>
-      <br />
-      <input
-        type="radio"
-        id="javascript"
-        name="fav_language"
-        value="JavaScript"
-      />
-      <label htmlFor="javascript">above 1000</label>
+      
+      
+      </div>
+      </div>
     </>
   );
 };

@@ -1,0 +1,36 @@
+.head
+{
+    text-align: center;
+    font-size: 40px;
+    text-decoration: underline;
+    font-weight: bold;
+    position: relative;
+    top: 7%;
+}
+.card-container
+{
+    width: 700px;
+    height: 600px;
+    background-color: rgba(61, 61, 61, 0.322); /* Set the background color with some transparency */
+    border-radius: 10px; /* Add rounded corners to the card */
+    padding: 20px; /* Add some padding to the card */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the card */
+    backdrop-filter: blur(10px) brightness(120%); /* Apply a blur and brightness filter to the card */
+}
+
+.review-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content
+{
+   position: relative;
+   top: 15%;
+   text-align: center;
+   font-size: 18px;
+}
+.highlight{
+    background-color: red;
+}

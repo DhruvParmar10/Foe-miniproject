@@ -2,17 +2,19 @@ import React, { useState, useEffect } from "react";
 import supabase from "../config/supabaseClient";
 import Auth from "../components/Auth";
 import Navbar from "../components/Navbar";
-import ProductCard from "../components/ProductCard";
-import FliterProduct from "../components/FliterProduct";
-import "./css/product.css";
+import { useNavigate } from "react-router-dom";
+
+import "./css/cart.css";
 
 const CDNURL =
   "https://oalncpmnrehvgswerkri.supabase.co/storage/v1/object/public/images/";
 
 const Cart = () => {
+  const navigate = useNavigate();
+
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
-  const [fliterText,setFliterText] = useState("Custom-order");
+  const [fliterText, setFliterText] = useState("Custom-order");
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -28,21 +30,32 @@ const Cart = () => {
     fetchProducts();
   }, []);
 
+  async function removeFromCart() {
+    const { data, error } = await supabase
+      .from("Products-Cart")
+      .delete()
+  }
+
   return (
     <div>
       <Auth />
       <Navbar />
-              <div className="Cart-container">
-                {products
-                  .map((product) => (
-                    <div key={products.id}>
-                      <div className="name">{product.Name}</div>
-                      <div className="Price">{product.Price}</div>
-                    </div>
-                  ))}
-              </div>
+      <div className="cart-container">
+        <h1 className="cart-title">Cart 🛒</h1>
+        <div className="cart-items">
+          {products.map((product) => (
+            <div className="cart-id" key={products.id}>
+              <div className="cart-name">{product.Name}</div>
+              <div className="cart-price">{product.Price}</div>
             </div>
-          
+          ))}
+        </div>
+        <hr />
+        <div className="chck">
+        <button  className="btn" onClick={() => {navigate('/Payment')}}>Checkout</button>
+        </div>
+      </div>
+    </div>
   );
 };
 

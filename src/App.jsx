@@ -9,6 +9,8 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import supabase from './config/supabaseClient'
 import Cart from './pages/Cart'
+import Payment from './pages/Payment'
+import Thankyou from './pages/Thankyou'
 
 
 
@@ -35,6 +37,8 @@ function App() {
         <Route path='/Reviews' element={<Review/>}/>
         <Route path='/:id' element={<ProductPage/>}/>
         <Route path='/Cart' element={<Cart/>}/>
+        <Route path='/Payment' element={<Payment/>}/>
+        <Route path='/Thankyou' element={<Thankyou/>}/>
       </Routes>
   </>
     

@@ -96,7 +96,7 @@ const Navbar = () => {
                 <a href="#">Find A Store 📌</a>
               </li>
               <li>
-                <a href="#">Get In Touch</a>
+                <Link to="/Reviews">About us</Link>
               </li>
               <li>
                 <Link to="/Login">👤</Link>
